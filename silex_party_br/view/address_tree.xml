@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<tree string="Addresses">
+    <field name="party"/>
+    <field name="name"/>
+    <field name="street"/>
+    <field name="number"/>
+    <field name="complement"/>
+    <field name="streetbis"/>
+    <field name="country"/>
+    <field name="subdivision"/>
+    <field name="city"/>
+    <field name="municipio"/>
+    <field name="active"/>
+</tree>

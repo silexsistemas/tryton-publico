@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Município">
+    <field name="nome" expand="1"/>
+    <field name="subdivision" expand="1"/>
+    <field name="codigo_ibge" expand="1"/>
+    <field name="codigo_siafi" expand="1"/>
+</tree>

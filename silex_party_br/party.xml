@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- Mudancas no form da pessoa  -->
+        <record model="ir.ui.view" id="view_silex_br_party_form">
+            <field name="model">party.party</field>
+            <!-- inherits from view party_view_form(ids view) from partys module -->
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="type">form</field>
+            <!-- xml file inside of 'view' folder from module that is being made -->
+            <!-- remember to reference the party.xml on the tryton.cfg -->
+            <field name="name">party_form</field>
+        </record>
+
+        <!-- Define the layout files for the views-->
+        <record model="ir.ui.view" id="municipio_form">
+            <field name="model">silex_party_br.municipio</field>
+            <field name="type">form</field>
+            <field name="name">municipio_form</field>
+        </record>
+        <record model="ir.ui.view" id="municipio_tree">
+            <field name="model">silex_party_br.municipio</field>
+            <field name="type">tree</field>
+            <field name="name">municipio_tree</field>
+        </record>
+
+        <!-- Define the action that will be called by the menu-->
+        <!-- the definition of the action must be placed before the call by the menu-->
+        <record model="ir.action.act_window" id="act_municipio">
+            <field name="name">Município</field>
+            <field name="res_model">silex_party_br.municipio</field>
+        </record>
+
+        <!--Define the windows that will be opened by the action -->
+        <record model="ir.action.act_window.view" id="act_municipio_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="municipio_tree"/>
+            <field name="act_window" ref="act_municipio"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_municipio_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="municipio_form"/>
+            <field name="act_window" ref="act_municipio"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_municipio_form">
+            <field name="name">Município</field>
+            <field name="res_model">silex_party_br.municipio</field>
+        </record>
+
+        <!-- add child menu structure -->
+        <!-- this menu item calls the action defined in the action attribute (act_academy_courses) -->
+        <menuitem name="Município" parent="ir.menu_administration"
+                  id="menu_municipio" action="act_municipio"/>
+
+
+        <!-- Mudancas no form e na treee do endereco -->
+        <record model="ir.ui.view" id="view_address_silex_br_party_form">
+            <field name="model">party.address</field>
+            <!-- inherits from view party_view_form(ids view) from partys module -->
+            <field name="inherit" ref="party.address_view_form"/>
+            <!-- xml file inside of 'view' folder from module that is being made -->
+            <!-- remember to reference the party.xml on the tryton.cfg -->
+            <field name="name">address_form</field>
+        </record>
+        <record model="ir.ui.view" id="view_address_silex_br_party_tree">
+            <field name="model">party.address</field>
+            <!-- inherits from view party_view_form(ids view) from partys module -->
+            <field name="inherit" ref="party.address_view_tree"/>
+            <!-- xml file inside of 'view' folder from module that is being made -->
+            <!-- remember to reference the party.xml on the tryton.cfg -->
+            <field name="name">address_tree</field>
+        </record>
+    </data>
+</tryton>

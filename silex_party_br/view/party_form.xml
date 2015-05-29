@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<data>
+    <!-- position may be after, before, replace, inside or replace_attributes
+    documentation: http://doc.tryton.org/2.8/trytond/doc/topics/views/extension.html
+    the xpath comes from party.xml, inside of party module - view folder -->
+    <xpath expr="/form/notebook/page[@id='general']" position='after'>
+        <page string="Complemento" id="page_complement">
+            <separator string="Complemento" colspan="4" id="complemento"/>
+            <group col="2" colspan="4" id="legal_type">
+                <label name="legal_type"/>
+                <field name="legal_type" xexpand="0"/>
+            </group>
+            <newline />
+            <label name="cpf"/>
+            <field name="cpf"/>
+            <label name="rg"/>
+            <field name="rg"/>
+            <label name="emissor"/>
+            <field name="emissor"/>
+            <label name="data_emissao"/>
+            <field name="data_emissao"/>
+            <newline />
+            <label name="cnpj"/>
+            <field name="cnpj"/>
+            <label name="ie"/>
+            <field name="ie"/>
+            <label name="im"/>
+            <field name="im"/>
+        </page>
+    </xpath>
+</data>

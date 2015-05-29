@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<form string="Município">
+    <label name="nome"/>
+    <field name="nome"/>
+    <newline/>
+    <label name="subdivision"/>
+    <field name="subdivision"/>
+    <newline/>
+    <label name="codigo_ibge"/>
+    <field name="codigo_ibge"/>
+    <newline/>
+    <label name="codigo_siafi"/>
+    <field name="codigo_siafi"/>
+</form>

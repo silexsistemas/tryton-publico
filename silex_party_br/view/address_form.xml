@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/label[@name='streetbis']" position='replace'>
+        <label name="number"/>
+    </xpath>
+    <xpath expr="/form/field[@name='streetbis']" position='replace'>
+        <field name="number"/>
+    </xpath>
+    <xpath expr="/form/field[@name='number']" position='after'>
+        <label name="complement"/>
+        <field name="complement"/>
+    </xpath>
+    <xpath expr="/form/label[@name='zip']" position='replace'>
+        <label name="streetbis"/>
+    </xpath>
+    <xpath expr="/form/field[@name='zip']" position='replace'>
+        <field name="streetbis"/>
+    </xpath>
+    <xpath expr="/form/label[@name='subdivision']" position='replace'>
+        <label name="municipio"/>
+    </xpath>
+    <xpath expr="/form/field[@name='subdivision']" position='replace'>
+        <field name="municipio"/>
+    </xpath>
+    <xpath expr="/form/label[@name='country']" position='replace'>
+        <label name="subdivision"/>
+    </xpath>
+    <xpath expr="/form/field[@name='country']" position='replace'>
+        <field name="subdivision"/>
+    </xpath>
+    <xpath expr="/form/label[@name='city']" position='replace'>
+        <label name="country"/>
+    </xpath>
+    <xpath expr="/form/field[@name='city']" position='replace'>
+        <field name="country"/>
+    </xpath>
+    <xpath expr="/form/field[@name='municipio']" position='after'>
+        <label name="zip"/>
+        <field name="zip"/>
+    </xpath>
+</data>
