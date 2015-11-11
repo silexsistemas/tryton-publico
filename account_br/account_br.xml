@@ -1,0 +1,1536 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!--DEFINE MODELO DE PLANO DE CONTAS BRASILEIRO DA SILEX. TABELA: account_type_template-->
+        <record model="account.account.type.template" id="tm_slx">
+            <field name="name">Plano de Tipos de Conta (Brasil)</field>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1">
+            <field name="name">Ativo</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1">
+            <field name="name">Circulante</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_1">
+            <field name="name">Disponibilidades</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_1_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_1_1">
+            <field name="name">Caixa</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_1_1_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_1_2">
+            <field name="name">Bancos Conta Movimento</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_1_1_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_1_3">
+            <field name="name">Aplicações Mercado Aberto</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_1_1_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_2">
+            <field name="name">Realizável a Curto Prazo</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_1_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_2_1">
+            <field name="name">Clientes</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_1_1_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_2_2">
+            <field name="name">Impostos a Recuperar</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_1_1_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_2_3">
+            <field name="name">Estoques</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_1_1_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_2_4">
+            <field name="name">Adiantamentos a Fornecedor</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="tm_slx_1_1_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_1_2_5">
+            <field name="name">Antecipação de Impostos</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="tm_slx_1_1_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_2">
+            <field name="name">Realizável a Longo Prazo</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3">
+            <field name="name">Permanente</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1">
+            <field name="name">Imobilizado</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_1_3"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1_1">
+            <field name="name">Instalações</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_1_3_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1_2">
+            <field name="name">Máquinas e Equipamentos</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_1_3_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1_3">
+            <field name="name">Móveis e Utensílios</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_1_3_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1_4">
+            <field name="name">Veículos</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="tm_slx_1_3_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1_5">
+            <field name="name">Direitos de Uso</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="tm_slx_1_3_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_1_3_1_6">
+            <field name="name">Depreciação Acumulada</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="tm_slx_1_3_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2">
+            <field name="name">Passivo</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx"/>
+            <field name="balance_sheet" eval="True"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1">
+            <field name="name">Circulante</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_1">
+            <field name="name">Empréstimos e Financiamentos</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_1_1">
+            <field name="name">Empréstimos dos Sócios</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_1_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_2">
+            <field name="name">Fornecedores</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_2_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_2_1">
+            <field name="name">Fornecedores Nacionais</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_1_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_3">
+            <field name="name">Impostos e Obrigações a Recolher</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_2_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_3_1">
+            <field name="name">Impostos a Recolher</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_1_3"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_3_2">
+            <field name="name">Obrigações Sociais</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_2_1_3"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_3_3">
+            <field name="name">Retenções de Impostos a Recolher</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_2_1_3"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_4">
+            <field name="name">Outras Obrigações</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="tm_slx_2_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_4_1">
+            <field name="name">Contas a Pagar</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_1_4"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_1_4_2">
+            <field name="name">Ordenados e Salários a Pagar</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_2_1_4"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_2">
+            <field name="name">Exigível a Longo Prazo</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_3">
+            <field name="name">Resultado de Exercícios Futuros</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_4">
+            <field name="name">Custo Despesas Correspond. às Receitas</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="tm_slx_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5">
+            <field name="name">Patrimônio Líquido</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="tm_slx_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5_1">
+            <field name="name">Capital Social</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_5"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5_1_1">
+            <field name="name">Capital Subscrito</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_5_1"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5_2">
+            <field name="name">Reservas</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_2_5"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5_2_1">
+            <field name="name">Reservas de Capital</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_5_2"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5_3">
+            <field name="name">Lucros ou Prejuízos Acumulados</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_2_5"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_2_5_3_1">
+            <field name="name">Lucros ou Prejuízos Acumulados</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_2_5_3"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3">
+            <field name="name">Despesas</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3_1">
+            <field name="name">Despesas Operacionais</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_3"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3_1_1">
+            <field name="name">Custos/Despesas</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_3_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3_1_1_1">
+            <field name="name">Despesas Financeiras</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_3_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3_1_1_2">
+            <field name="name">Custos dos Serviços Prestados</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_3_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3_1_1_3">
+            <field name="name">Despesas Administrativas</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="tm_slx_3_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_3_1_1_4">
+            <field name="name">Despesas Tributárias</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="tm_slx_3_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4">
+            <field name="name">Receitas</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="tm_slx"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1">
+            <field name="name">Receitas Operacionais</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_4"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1_1">
+            <field name="name">Receitas</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_4_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1_1_1">
+            <field name="name">Prestação de Serviços</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_4_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1_1_2">
+            <field name="name">Impostos Incidentes</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_4_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1_2">
+            <field name="name">Outras Receitas Operacionais</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_4_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1_2_1">
+            <field name="name">Receitas Financeiras</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_4_1_2"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_4_1_2_2">
+            <field name="name">Recuperação de Despesas</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_4_1_2"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_5">
+            <field name="name">Apuração de Resultados</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="tm_slx"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_5_1">
+            <field name="name">Contas de Apuração</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_5"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_5_1_1">
+            <field name="name">Exercício Comercial</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_5_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_5_1_1_1">
+            <field name="name">Resultado da Correção Monetária</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="tm_slx_5_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="tm_slx_5_1_1_2">
+            <field name="name">Resultado do Exercício</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="tm_slx_5_1_1"/>
+            <field name="income_statement" eval="True"/>
+        </record>
+
+
+
+        <!--DEFINE MODELO DE PLANO DE CONTAS BRASILEIRO DA SILEX. TABELA: account_template-->
+        <record model="account.account.template" id="tp_slx">
+            <field name="name">Plano de Contas (Brasil)</field>
+            <field name="kind">view</field>
+            <field name="type" ref="tm_slx"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1">
+            <field name="name">Ativo</field>
+            <field name="code">1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1">
+            <field name="name">Circulante</field>
+            <field name="code">1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1">
+            <field name="name">Disponibilidades</field>
+            <field name="code">1.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_1">
+            <field name="name">Caixa</field>
+            <field name="code">1.1.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_1_1">
+            <field name="name">Caixa</field>
+            <field name="code">1.1.1.1.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_2">
+            <field name="name">Bancos Conta Movimento</field>
+            <field name="code">1.1.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_2_1">
+            <field name="name">Banco Santa Helena</field>
+            <field name="code">1.1.1.2.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_2_2">
+            <field name="name">Banco Santa Marcella</field>
+            <field name="code">1.1.1.2.2</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_3">
+            <field name="name">Aplicações Mercado Aberto</field>
+            <field name="code">1.1.1.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_1_3_1">
+            <field name="name">Banco Santa Iasmini</field>
+            <field name="code">1.1.1.3.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2">
+            <field name="name">Realizável a Curto Prazo</field>
+            <field name="code">1.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_1">
+            <field name="name">Clientes</field>
+            <field name="code">1.1.2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_1_1">
+            <field name="name">Cliente Amigão S/A</field>
+            <field name="code">1.1.2.1.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_1_2">
+            <field name="name">Cliente Super Bacana Ltda.</field>
+            <field name="code">1.1.2.1.2</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_1_3">
+            <field name="name">Cliente Razão do Meu Viver Ltda.</field>
+            <field name="code">1.1.2.1.3</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_2">
+            <field name="name">Impostos a Recuperar</field>
+            <field name="code">1.1.2.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_2_1">
+            <field name="name">INSS</field>
+            <field name="code">1.1.2.2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_2_2">
+            <field name="name">ICMS</field>
+            <field name="code">1.1.2.2.2</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_1_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_2_3">
+            <field name="name">IRRF</field>
+            <field name="code">1.1.2.2.3</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_1_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_2_4">
+            <field name="name">PIS</field>
+            <field name="code">1.1.2.2.4</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_1_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_2_5">
+            <field name="name">ISSQN</field>
+            <field name="code">1.1.2.2.5</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_1_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_3">
+            <field name="name">Estoques</field>
+            <field name="code">1.1.2.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_3_1">
+            <field name="name">Mercadorias para Revenda</field>
+            <field name="code">1.1.2.3.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_1_2_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_4">
+            <field name="name">Adiantamento a Fornecedor</field>
+            <field name="code">1.1.2.4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_4_1">
+            <field name="name">Adiantamento a Fornecedor</field>
+            <field name="code">1.1.2.4.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_1_1_2_4"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_5">
+            <field name="name">Antecipação de Impostos</field>
+            <field name="code">1.1.2.5</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_1_2_5_1">
+            <field name="name">Cliente Gente Boa Ltda.</field>
+            <field name="code">1.1.2.5.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_1_1_2_5"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_1_2_5"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_2">
+            <field name="name">Realizável a Longo Prazo</field>
+            <field name="code">1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3">
+            <field name="name">Permanente</field>
+            <field name="code">1.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1">
+            <field name="name">Imobilizado</field>
+            <field name="code">1.3.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_1">
+            <field name="name">Instalações</field>
+            <field name="code">1.3.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_1_1">
+            <field name="name">Instalações</field>
+            <field name="code">1.3.1.1.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_3_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_2">
+            <field name="name">Máquinas e Equipamentos</field>
+            <field name="code">1.3.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_2_1">
+            <field name="name">Máquinas e Equipamentos</field>
+            <field name="code">1.3.1.2.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_3_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_2_2">
+            <field name="name">Equipamentos de Informática</field>
+            <field name="code">1.3.1.2.2</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_3_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_3">
+            <field name="name">Móvies e Utensílios</field>
+            <field name="code">1.3.1.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_3_1">
+            <field name="name">Moveis e Utensílios</field>
+            <field name="code">1.3.1.3.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_3_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_4">
+            <field name="name">Veículos</field>
+            <field name="code">1.3.1.4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_4_1">
+            <field name="name">Veículos</field>
+            <field name="code">1.3.1.4.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_3_1_4"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_5">
+            <field name="name">Direitos de Uso</field>
+            <field name="code">1.3.1.5</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_5_1">
+            <field name="name">Direito de Uso Software</field>
+            <field name="code">1.3.1.5.1</field>
+            <field name="kind">receivable</field>
+            <field name="type" ref="tm_slx_1_3_1_5"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_5"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_6">
+            <field name="name">Depreciação Acumulada</field>
+            <field name="code">1.3.1.6</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_1_3_1_6_1">
+            <field name="name">Depreciação Acumulada</field>
+            <field name="code">1.3.1.6.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_1_3_1_6"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_1_3_1_6"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2">
+            <field name="name">Passivo</field>
+            <field name="code">2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1">
+            <field name="name">Circulante</field>
+            <field name="code">2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_1">
+            <field name="name">Empréstimos e Financiamentos</field>
+            <field name="code">2.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_1_1">
+            <field name="name">Empréstimo dos Sócios</field>
+            <field name="code">2.1.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_1_1_1">
+            <field name="name">João Mão Aberta</field>
+            <field name="code">2.1.1.1.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_1_1_2">
+            <field name="name">Antônio Pão Duro</field>
+            <field name="code">2.1.1.1.2</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_2">
+            <field name="name">Fornecedores</field>
+            <field name="code">2.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_2_1">
+            <field name="name">Fornecedores Nacionais</field>
+            <field name="code">2.1.2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_2_1_1">
+            <field name="name">Fornecedor Super Rapidão Ltda.</field>
+            <field name="code">2.1.2.1.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_1_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_2_1_2">
+            <field name="name">Fornecedor Joinha Joinha S/A</field>
+            <field name="code">2.1.2.1.2</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_1_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3">
+            <field name="name">Impostos e Obrigações a Recolher</field>
+            <field name="code">2.1.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1">
+            <field name="name">Impostos a Recolher</field>
+            <field name="code">2.1.3.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_1">
+            <field name="name">Cofins</field>
+            <field name="code">2.1.3.1.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_2">
+            <field name="name">IRRF</field>
+            <field name="code">2.1.3.1.2</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_3">
+            <field name="name">ISSQN</field>
+            <field name="code">2.1.3.1.3</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_4">
+            <field name="name">PIS</field>
+            <field name="code">2.1.3.1.4</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_5">
+            <field name="name">SIMPLES</field>
+            <field name="code">2.1.3.1.5</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_6">
+            <field name="name">PIS codigo 6912</field>
+            <field name="code">2.1.3.1.6</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_1_7">
+            <field name="name">COFINS codigo 5856</field>
+            <field name="code">2.1.3.1.7</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_2">
+            <field name="name">Obrigações Sociais</field>
+            <field name="code">2.1.3.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_2_1">
+            <field name="name">FGTS a Recolher</field>
+            <field name="code">2.1.3.2.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_2_2">
+            <field name="name">INSS a Recolher</field>
+            <field name="code">2.1.3.2.2</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_3">
+            <field name="name">Retenções de Impostos a Recolher</field>
+            <field name="code">2.1.3.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_3_3_1">
+            <field name="name">Contribuição Sindical</field>
+            <field name="code">2.1.3.3.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_2_1_3_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_3_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_4">
+            <field name="name">Outras Obrigações</field>
+            <field name="code">2.1.4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_4_1">
+            <field name="name">Contas a Pagar</field>
+            <field name="code">2.1.4.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_4_1_1">
+            <field name="name">Retirada Pro-Labore</field>
+            <field name="code">2.1.4.1.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_1_4_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_4_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_4_2">
+            <field name="name">Ordenados e Salários a Pagar</field>
+            <field name="code">2.1.4.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_1_4_2_1">
+            <field name="name">Ordenados e Salários</field>
+            <field name="code">2.1.4.2.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_1_4_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_1_4_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_2">
+            <field name="name">Exigível a Longo Prazo</field>
+            <field name="code">2.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_3">
+            <field name="name">Resultado de Exercícios Futuros</field>
+            <field name="code">2.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_4">
+            <field name="name">Custo Despesas Correspondente às Receitas</field>
+            <field name="code">2.4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5">
+            <field name="name">Patrimônio Líquido</field>
+            <field name="code">2.5</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_1">
+            <field name="name">Capital Social</field>
+            <field name="code">2.5.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_5"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_1_1">
+            <field name="name">Capital Subscrito</field>
+            <field name="code">2.5.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_5_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_1_1_1">
+            <field name="name">João Mão Aberta</field>
+            <field name="code">2.5.1.1.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_5_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_5_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_1_1_2">
+            <field name="name">Antônio Pão Duro</field>
+            <field name="code">2.5.1.1.2</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_5_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_5_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_1_1_3">
+            <field name="name">Helena Sabichona</field>
+            <field name="code">2.5.1.1.3</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_5_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_5_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_2">
+            <field name="name">Reservas</field>
+            <field name="code">2.5.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_5"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_2_1">
+            <field name="name">Reservas de Capital</field>
+            <field name="code">2.5.2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_5_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_2_1_1">
+            <field name="name">Reserva Correção Monetária Especial</field>
+            <field name="code">2.5.2.1.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_5_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_5_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_3">
+            <field name="name">Lucros ou Prejuízos Acumulados</field>
+            <field name="code">2.5.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_5"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_3_1">
+            <field name="name">Lucros ou Prejuízos Acumulados</field>
+            <field name="code">2.5.3.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_2_5_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_3_1_1">
+            <field name="name">Lucros ou Prejuízos Acumulados</field>
+            <field name="code">2.5.3.1.1</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_5_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_5_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_2_5_3_1_2">
+            <field name="name">Resultado do Exercício</field>
+            <field name="code">2.5.3.1.2</field>
+            <field name="kind">payable</field>
+            <field name="type" ref="tm_slx_2_5_3_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_2_5_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3">
+            <field name="name">Despesas</field>
+            <field name="code">3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1">
+            <field name="name">Despesas Operacionais</field>
+            <field name="code">3.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1">
+            <field name="name">Custos/Despesas</field>
+            <field name="code">3.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_3_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_1">
+            <field name="name">Despesas Financeiras</field>
+            <field name="code">3.1.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_3_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_1_1">
+            <field name="name">Comissões e Despesas Bancárias</field>
+            <field name="code">3.1.1.1.1</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_1_2">
+            <field name="name">I.O.F/I.O.C</field>
+            <field name="code">3.1.1.1.2</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2">
+            <field name="name">Custo dos Serviços Prestados</field>
+            <field name="code">3.1.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_3_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_1">
+            <field name="name">Assistência Médica Social</field>
+            <field name="code">3.1.1.2.1</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_2">
+            <field name="name">Condução do Pessoal</field>
+            <field name="code">3.1.1.2.2</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_3">
+            <field name="name">13o. Salário</field>
+            <field name="code">3.1.1.2.3</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_4">
+            <field name="name">Férias</field>
+            <field name="code">3.1.1.2.4</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_5">
+            <field name="name">FGTS</field>
+            <field name="code">3.1.1.2.5</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_6">
+            <field name="name">Indenizações</field>
+            <field name="code">3.1.1.2.6</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_7">
+            <field name="name">Salários e Ordenados</field>
+            <field name="code">3.1.1.2.7</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_8">
+            <field name="name">Uniformes</field>
+            <field name="code">3.1.1.2.8</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_9">
+            <field name="name">Manutenção e Reparos</field>
+            <field name="code">3.1.1.2.9</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_10">
+            <field name="name">Material Aplicado</field>
+            <field name="code">3.1.1.2.10</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_2_11">
+            <field name="name">FGTS - Multa Rescisória</field>
+            <field name="code">3.1.1.2.11</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3">
+            <field name="name">Despesas Administrativas</field>
+            <field name="code">3.1.1.3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_3_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_1">
+            <field name="name">Água</field>
+            <field name="code">3.1.1.3.1</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_2">
+            <field name="name">Alimentação</field>
+            <field name="code">3.1.1.3.2</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_3">
+            <field name="name">Cartório</field>
+            <field name="code">3.1.1.3.3</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_4">
+            <field name="name">Combustíveis e Lubrificantes</field>
+            <field name="code">3.1.1.3.4</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_5">
+            <field name="name">Conduções e Transportes</field>
+            <field name="code">3.1.1.3.5</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_6">
+            <field name="name">Correios e Malotes</field>
+            <field name="code">3.1.1.3.6</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_7">
+            <field name="name">Energia Elétrica</field>
+            <field name="code">3.1.1.3.7</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_8">
+            <field name="name">Manutenção e Reparos</field>
+            <field name="code">3.1.1.3.8</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_9">
+            <field name="name">Material de Escritório</field>
+            <field name="code">3.1.1.3.9</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_10">
+            <field name="name">Material Auxiliar de Consumo</field>
+            <field name="code">3.1.1.3.10</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_11">
+            <field name="name">Retirada Pro-Labore</field>
+            <field name="code">3.1.1.3.11</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_12">
+            <field name="name">Seguros</field>
+            <field name="code">3.1.1.3.12</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_13">
+            <field name="name">Sindicatos e Conselhos</field>
+            <field name="code">3.1.1.3.13</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_14">
+            <field name="name">Telefone</field>
+            <field name="code">3.1.1.3.14</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_15">
+            <field name="name">Propaganda e Publicidade</field>
+            <field name="code">3.1.1.3.15</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_16">
+            <field name="name">Estacionamento</field>
+            <field name="code">3.1.1.3.16</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_17">
+            <field name="name">Locação de Equipamentos e Veículos</field>
+            <field name="code">3.1.1.3.17</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_18">
+            <field name="name">Hospedagem</field>
+            <field name="code">3.1.1.3.18</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_19">
+            <field name="name">Serviços de Terceiros Pessoas Jurídicas</field>
+            <field name="code">3.1.1.3.19</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_20">
+            <field name="name">Assinaturas</field>
+            <field name="code">3.1.1.3.20</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_21">
+            <field name="name">Limpeza e Conservação</field>
+            <field name="code">3.1.1.3.21</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_22">
+            <field name="name">Materiais de Uso Permanente</field>
+            <field name="code">3.1.1.3.22</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_23">
+            <field name="name">Material de Construção</field>
+            <field name="code">3.1.1.3.23</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_24">
+            <field name="name">Serviços de Informática</field>
+            <field name="code">3.1.1.3.24</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_3_25">
+            <field name="name">Segurança Eletrônica</field>
+            <field name="code">3.1.1.3.25</field>
+            <field name="kind">expense</field>
+            <field name="type" ref="tm_slx_3_1_1_3"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_3"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_4">
+            <field name="name">Despesas Tributárias</field>
+            <field name="code">3.1.1.4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_3_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_4_1">
+            <field name="name">IPTU</field>
+            <field name="code">3.1.1.4.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_3_1_1_4"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_4_2">
+            <field name="name">Taxas Diversas</field>
+            <field name="code">3.1.1.4.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_3_1_1_4"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_4_3">
+            <field name="name">Multas</field>
+            <field name="code">3.1.1.4.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_3_1_1_4"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4">
+            <field name="name">Receitas</field>
+            <field name="code">4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1">
+            <field name="name">Receitas Operacionais</field>
+            <field name="code">4.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_1">
+            <field name="name">Receitas</field>
+            <field name="code">4.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_1_1">
+            <field name="name">Prestação de Serviços</field>
+            <field name="code">4.1.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_1_1_1">
+            <field name="name">Consultoria em Serviços da Informação</field>
+            <field name="code">4.1.1.1.1</field>
+            <field name="kind">revenue</field>
+            <field name="type" ref="tm_slx_4_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_4_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_1_2">
+            <field name="name">Tributos Incidentes</field>
+            <field name="code">4.1.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_1_2_1">
+            <field name="name">ISSQN</field>
+            <field name="code">4.1.1.2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_1_2_2">
+            <field name="name">Simples</field>
+            <field name="code">4.1.1.2.2</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_4_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_4_1_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2">
+            <field name="name">Outras Receitas Operacionas</field>
+            <field name="code">4.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2_1">
+            <field name="name">Receitas Financeiras</field>
+            <field name="code">4.1.2.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2_1_1">
+            <field name="name">Juros Recebidos</field>
+            <field name="code">4.1.2.1.1</field>
+            <field name="kind">revenue</field>
+            <field name="type" ref="tm_slx_4_1_2_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_4_1_2_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2_2">
+            <field name="name">Recuperação de Despesas</field>
+            <field name="code">4.1.2.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_4_1_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2_2_1">
+            <field name="name">Vale Transporte</field>
+            <field name="code">4.1.2.2.1</field>
+            <field name="kind">revenue</field>
+            <field name="type" ref="tm_slx_4_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_4_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2_2_2">
+            <field name="name">Assistência Médica</field>
+            <field name="code">4.1.2.2.2</field>
+            <field name="kind">revenue</field>
+            <field name="type" ref="tm_slx_4_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_4_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_4_1_2_2_3">
+            <field name="name">Salários</field>
+            <field name="code">4.1.2.2.3</field>
+            <field name="kind">revenue</field>
+            <field name="type" ref="tm_slx_4_1_2_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_4_1_2_2"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5">
+            <field name="name">Apuração de Resultados</field>
+            <field name="code">5</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5_1">
+            <field name="name">Contas de Apuração</field>
+            <field name="code">5.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_5"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5_1_1">
+            <field name="name">Exercício Comercial</field>
+            <field name="code">5.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_5_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5_1_1_1">
+            <field name="name">Resultado do Exercício</field>
+            <field name="code">5.1.1.1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_5_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5_1_1_1_1">
+            <field name="name">Resultado do Exercício</field>
+            <field name="code">5.1.1.1.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_5_1_1_1"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_5_1_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5_1_1_2">
+            <field name="name">Resultado da Correção Monetária</field>
+            <field name="code">5.1.1.2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="tp_slx_5_1_1"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_5_1_1_2_1">
+            <field name="name">Resultado da Correcao Monetária</field>
+            <field name="code">5.1.1.2.1</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_5_1_1_2"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_5_1_1_2"/>
+        </record>
+    </data>
+</tryton>

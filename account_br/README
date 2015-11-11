@@ -1,0 +1,44 @@
+account_br
+==========
+
+Um módulo com planos de contas para o Brasil baseado na plataforma de aplicação Tryton.
+
+
+Instalação
+----------
+
+Ver INSTALL
+
+Suporte
+-------
+
+Se você encontrar quaisquer problemas com o Tryton, entre em contato
+com o bug tracker, a lista de e-mails, wiki ou canal do IRC:
+
+  http://bugs.tryton.org/
+  http://groups.tryton.org/
+  http://wiki.tryton.org/
+  irc://irc.freenode.net/tryton
+
+Se você precisa de um plano de contas customizado, entre em contato com a Sílex Sistemas
+
+  http://www.silexsistemas.com.br/
+
+Licença
+-------
+
+See LICENSE
+
+Copyright
+---------
+
+See COPYRIGHT
+
+
+Para mais informações sobre o Tryton, por favor visite:
+
+  http://www.tryton.org/
+
+Para mais informações sobre o módulo, contacte a Sílex Sistemas:
+
+  http://www.silexsistemas.com.br/
