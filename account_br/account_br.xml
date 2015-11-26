@@ -1369,16 +1369,24 @@
             <field name="parent" ref="tp_slx_3_1_1_4"/>
         </record>
         <record model="account.account.template" id="tp_slx_3_1_1_4_2">
-            <field name="name">Taxas Diversas</field>
-            <field name="code">3.1.1.4.1</field>
+            <field name="name">ISSQN</field>
+            <field name="code">3.1.1.4.3</field>
             <field name="kind">other</field>
             <field name="type" ref="tm_slx_3_1_1_4"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="tp_slx_3_1_1_4"/>
         </record>
         <record model="account.account.template" id="tp_slx_3_1_1_4_3">
+            <field name="name">Taxas Diversas</field>
+            <field name="code">3.1.1.4.3</field>
+            <field name="kind">other</field>
+            <field name="type" ref="tm_slx_3_1_1_4"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="tp_slx_3_1_1_4"/>
+        </record>
+        <record model="account.account.template" id="tp_slx_3_1_1_4_4">
             <field name="name">Multas</field>
-            <field name="code">3.1.1.4.1</field>
+            <field name="code">3.1.1.4.4</field>
             <field name="kind">other</field>
             <field name="type" ref="tm_slx_3_1_1_4"/>
             <field name="reconcile" eval="True"/>
